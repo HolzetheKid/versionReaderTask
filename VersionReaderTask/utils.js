@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.setEnvVar = exports.setEnvVars = exports.setBuildVariable = exports.getFirstMatch = exports.readProjectFile = exports.getProjectFiles = void 0;
 const tl = require("azure-pipelines-task-lib/task");
 const xmldom_1 = __importDefault(require("xmldom"));
 const xpath_1 = __importDefault(require("xpath"));

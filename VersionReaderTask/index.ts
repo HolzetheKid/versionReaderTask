@@ -63,8 +63,8 @@ export class versionReader {
             tl.setResult(tl.TaskResult.Succeeded, "Variables set");
         }
         catch (err) {
-            tl.error(err);
-            tl.setResult(tl.TaskResult.Failed, err);
+            tl.error((err as Error).message);
+            tl.setResult(tl.TaskResult.Failed,(err as Error).message);
         }
     }
 
