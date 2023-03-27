@@ -14,7 +14,7 @@ describe('VersionReaderTask v2 tests', function () {
     });
     
     // test that task fails 
-    it('Fails if no project spec is given', function(done: MochaDone){
+    it('Fails if no project spec is given', function(done: Mocha.Done){
         let tp = path.join(__dirname, 'inputTest.js');
         let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
         
@@ -28,7 +28,7 @@ describe('VersionReaderTask v2 tests', function () {
     });
 
     // task runs with file specified
-    it('Runs if "searchPattern" is set', function(done: MochaDone) {
+    it('Runs if "searchPattern" is set', function(done: Mocha.Done) {
         let tp = path.join(__dirname, 'runVersion.js');
         let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
     
@@ -41,7 +41,7 @@ describe('VersionReaderTask v2 tests', function () {
     });
     
     
-    it('Variables and build values are set', function(done: MochaDone) {
+    it('Variables and build values are set', function(done: Mocha.Done) {
         // reads the Version.csproj file with no prefix
         let tp = path.join(__dirname, 'runVersion.js');
         let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
@@ -68,7 +68,7 @@ describe('VersionReaderTask v2 tests', function () {
     });
  
 
-    it('Variables have Prefix applied if set', function(done: MochaDone) {
+    it('Variables have Prefix applied if set', function(done: Mocha.Done) {
         // reads the Version.csproj file with TEST prefix
         let tp = path.join(__dirname, 'runVersionWithPrefix.js');
         let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
@@ -92,7 +92,7 @@ describe('VersionReaderTask v2 tests', function () {
     });
  
     
-    it('Version reverts to 1.0.0 if not found', function(done: MochaDone) {
+    it('Version reverts to 1.0.0 if not found', function(done: Mocha.Done) {
         // reads the Version.csproj file with TEST prefix
         let tp = path.join(__dirname, 'runVersionMissing.js');
         let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
